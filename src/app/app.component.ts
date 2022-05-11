@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { FormGroupTypeSafe, ITypeSafeFormControls } from './type-safe-fg-packages/classes';
+import { FormGroupTypeSafe } from 'dist/ng-typesafe-form-group/public-api';
 
 interface FormControls{
   name: FormControl,
@@ -21,7 +21,7 @@ export class AppComponent {
   })
 
   typeSafeFormGroupTypedWeak = new FormGroupTypeSafe({
-    x: new FormControl()
+    x: new FormControl('', [Validators.required])
   });
 
   constructor(){}
@@ -30,8 +30,12 @@ export class AppComponent {
     this.typeSafeFormGroup.controls.name
     this.typeSafeFormGroup.controls.message
     this.typeSafeFormGroup.controls.email
+    this.typeSafeFormGroup.controls.email.value
+    this.typeSafeFormGroup.controls.email.valueChanges.subscribe();
 
     this.typeSafeFormGroupTypedWeak.controls.x
+    this.typeSafeFormGroupTypedWeak.controls.x.value
+    this.typeSafeFormGroupTypedWeak.controls.x.valueChanges.subscribe();
   }
 
 }

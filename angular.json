@@ -108,6 +108,37 @@
           }
         }
       }
+    },
+    "ng-typesafe-form-group": {
+      "projectType": "library",
+      "root": "projects/ng-typesafe-form-group",
+      "sourceRoot": "projects/ng-typesafe-form-group/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ng-typesafe-form-group/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ng-typesafe-form-group/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ng-typesafe-form-group/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-typesafe-form-group/src/test.ts",
+            "tsConfig": "projects/ng-typesafe-form-group/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-typesafe-form-group/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "typeSafeFormGroup"

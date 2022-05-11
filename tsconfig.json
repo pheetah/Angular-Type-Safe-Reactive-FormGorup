@@ -11,6 +11,12 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
+    "paths": {
+      "ng-typesafe-form-group": [
+        "dist/ng-typesafe-form-group/ng-typesafe-form-group",
+        "dist/ng-typesafe-form-group"
+      ]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

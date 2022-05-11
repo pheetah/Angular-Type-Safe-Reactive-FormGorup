@@ -1,7 +1,7 @@
-# Angular-Type-Safe-Reactive-FormGorup
+# Angular-Type-Safe-Reactive-FormGroup
 Reactive FormGroups Wrapped in a Type Safe Class
 
-FormGorup Wrapper implemented:
+FormGroup Wrapper implemented:
 
 ```ruby
 export class FormGroupTypeSafe<T extends object> extends FormGroup{
