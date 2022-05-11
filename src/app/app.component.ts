@@ -23,9 +23,9 @@ export class AppComponent {
   constructor(){}
 
   ngOnInit(){
-    //this.typeSafeFormGroup.controls.name
-    //this.typeSafeFormGroup.controls.message
-    //this.typeSafeFormGroup.controls.email
+    this.typeSafeFormGroup.controls.name
+    this.typeSafeFormGroup.controls.message
+    this.typeSafeFormGroup.controls.email
   }
 
 }
