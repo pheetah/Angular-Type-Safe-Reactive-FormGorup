@@ -1,27 +1,50 @@
-# TypeSafeFormGroup
+# Angular-Type-Safe-Reactive-FormGorup
+Reactive FormGroups Wrapped in a Type Safe Class
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
+FormGorup Wrapper implemented:
 
-## Development server
+```ruby
+export class FormGroupTypeSafe<T extends object> extends FormGroup{
+    constructor(
+        controls: { [key in keyof T]: AbstractControl; }, 
+        validatorOrOpts?: ValidatorFn | AbstractControlOptions | ValidatorFn[], 
+        asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[]
+    ){
+        super(controls, validatorOrOpts, asyncValidator);
+    }
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    override controls!: {[key in keyof T]: FormControl};
+}
+```
 
-## Code scaffolding
+This way, by passing a simple interface, FormGroups can be type safe. As a simple usage, check this:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```ruby
+interface FormControls{
+  name: FormControl,
+  email: FormControl,
+  message: FormControl,
+};
 
-## Build
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent {
+  typeSafeFormGroup = new FormGroupTypeSafe<FormControls>({
+    name: new FormControl('', [Validators.required, Validators.minLength(5)]),
+    email: new FormControl('', [Validators.required, Validators.maxLength(30)]),
+    message: new FormControl('', [Validators.required, Validators.maxLength(100)])
+  })
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+  constructor(){}
 
-## Running unit tests
+  ngOnInit(){
+    this.typeSafeFormGroup.controls.name
+    this.typeSafeFormGroup.controls.message
+    this.typeSafeFormGroup.controls.email
+  }
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+}
+```
