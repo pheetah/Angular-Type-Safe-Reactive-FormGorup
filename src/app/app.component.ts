@@ -20,12 +20,18 @@ export class AppComponent {
     message: new FormControl('', [Validators.required, Validators.maxLength(100)])
   })
 
+  typeSafeFormGroupTypedWeak = new FormGroupTypeSafe({
+    x: new FormControl()
+  });
+
   constructor(){}
 
   ngOnInit(){
     this.typeSafeFormGroup.controls.name
     this.typeSafeFormGroup.controls.message
     this.typeSafeFormGroup.controls.email
+
+    this.typeSafeFormGroupTypedWeak.controls.x
   }
 
 }
