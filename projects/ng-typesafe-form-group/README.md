@@ -12,9 +12,13 @@ Reactive FormGroups Wrapped in a Type Safe Class
 
 ## Installation and Basic Usage Guide
 
-<p style="font-style: italic">* Implemented in Angular v13.2.x</p>
+*Implemented on Angular v13.2.x*
 
-<details><summary style="font-weight:bold">Installation and Basic Integration</summary>
+<br />
+
+Please click on dropdowns below for further information:
+
+<details><summary style="font-weight:bold;">Installation and Basic Integration</summary>
 <p>
 <ul style="list-style-type: upper-roman;">
   <li>
@@ -170,6 +174,14 @@ Reactive FormGroups Wrapped in a Type Safe Class
 
   <br><br>
 </details>
+
+<br />
+
+<br />
+
+<br />
+
+<br />
 
 # Important note
 
