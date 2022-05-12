@@ -3,11 +3,11 @@ import {
     AbstractControlOptions, 
     AsyncValidatorFn, 
     FormControl, 
+    FormControlOptions, 
     FormGroup, 
     ValidatorFn 
 } from "@angular/forms";
-
-export interface ITypeSafeFormControls{[key:string]:FormControl};
+import { Observable } from "rxjs";
 
 export class FormGroupTypeSafe<T extends object> extends FormGroup{
     constructor(
@@ -18,5 +18,23 @@ export class FormGroupTypeSafe<T extends object> extends FormGroup{
         super(controls, validatorOrOpts, asyncValidator);
     }
 
-    override controls!: Record<keyof T, AbstractControl>;
+    override controls!: Record<keyof T, FormControlTypeSafe<T[keyof T]>>;
+
+    override valueChanges!: Observable<T>;
+
+    override value!: T;
+}
+
+export class FormControlTypeSafe<K> extends FormControl{
+    constructor(
+        formState?: any, 
+        validatorOrOpts?: ValidatorFn | ValidatorFn[] | FormControlOptions | null, 
+        asyncValidator?: AsyncValidatorFn | AsyncValidatorFn[] | null
+    ){
+        super(formState, validatorOrOpts, asyncValidator);
+    }
+
+    override valueChanges!: Observable<K>;
+
+    override value!: K;
 }

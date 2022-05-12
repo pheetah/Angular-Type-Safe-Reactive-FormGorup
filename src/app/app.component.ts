@@ -45,8 +45,7 @@ export class AppComponent {
       console.log(a)
     })
 
-    this.typeSafeFormGroupTypedWeak.controls.x
-    this.typeSafeFormGroupTypedWeak.controls.x.value
+    let x:string = <unknown> this.typeSafeFormGroupTypedWeak.controls.x.value as string;
     this.typeSafeFormGroupTypedWeak.controls.x.valueChanges.subscribe(a => a);
 
     this.typeSafeFormGroupTypedWeak2.controls.y.valueChanges.subscribe(y => y)
