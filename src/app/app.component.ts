@@ -3,6 +3,9 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FormControlTypeSafe, FormGroupTypeSafe } from './type-safe-fg-packages/classes';
 //import { FormGroupTypeSafe } from 'dist/ng-typesafe-form-group/public-api';
 
+
+// https://stackblitz.com/edit/angular-ivy-sfjb2q?file=src%2Fapp%2Fapp.component.ts,src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.module.ts
+
 interface FormControls{
   name: string,
   email: string,
