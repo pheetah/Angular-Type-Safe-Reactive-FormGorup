@@ -1,7 +1,7 @@
 # Angular TypeSafe Reactive Forms
 Reactive FormGroups Wrapped in a Type Safe Class
 
-*This is a a package still evolving*
+*This is a a package still evolving* :gear:
 - [x] Type Safe Form Groups And Form Controls implemented
 - [ ] Improve the documentation
 - [ ] Provide StackBlitz example cases
