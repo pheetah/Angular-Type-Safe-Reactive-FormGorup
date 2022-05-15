@@ -1,6 +1,8 @@
 {
   "name": "ng-typesafe-formgroup",
-  "version": "0.0.4",
+  "version": "0.0.5",
+  "description": "A ligthweight (just 19kb) Angular Reactive Form package that makes it's controls type safe and values asserted.",
+  "license": "MIT",
   "url" : "https://github.com/pheetah/Angular-Type-Safe-Reactive-FormGroup",
   "email" : "phateih@gmail.com",
   "repository": {
@@ -17,5 +19,5 @@
   "author": {
     "name": "Fatih Ersoy"
   },
-  "keywords": ["Angular", "Type Safe", "Reactive", "Form Group"]
+  "keywords": ["Angular", "Type Safe", "Reactive", "Form", "FormControl", "FormGroup", "Forms", "Reactive Forms"]
 }

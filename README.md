@@ -9,6 +9,7 @@ Reactive FormGroups Wrapped in a Type Safe Class
 
 
 - Improvements suggesions, bugs, errors, pull requests? Everything you need: https://github.com/pheetah/Angular-Type-Safe-Reactive-FormGroup
+- check this stackblitz example project: https://stackblitz.com/edit/ng-typesafe-formgroup?file=src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.component.ts
 
 ## Installation and Basic Usage Guide
 

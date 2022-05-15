@@ -1,14 +1,8 @@
 # Angular TypeSafe Reactive Forms
 Reactive FormGroups Wrapped in a Type Safe Class
 
-*This is a a package still evolving*
-- [x] Type Safe Form Groups And Form Controls implemented
-- [ ] Improve the documentation
-- [ ] Provide StackBlitz example cases
-- [ ] Improve the package that converts form interface into the form of backend service contract
-
-
-- Improvements suggesions, bugs, errors, pull requests? Everything you need: https://github.com/pheetah/Angular-Type-Safe-Reactive-FormGroup
+- Improvements suggesions, bugs, errors, pull requests or become a contributor? Everything you need: https://github.com/pheetah/Angular-Type-Safe-Reactive-FormGroup
+- Check this examples on stackblitz: https://stackblitz.com/edit/ng-typesafe-formgroup?file=src%2Fapp%2Fapp.component.html,src%2Fapp%2Fapp.component.ts
 
 ## Installation and Basic Usage Guide
 
