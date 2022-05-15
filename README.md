@@ -3,8 +3,8 @@ Reactive FormGroups Wrapped in a Type Safe Class
 
 *This is a a package still evolving* :gear:
 - [x] Type Safe Form Groups And Form Controls implemented
-- [ ] Improve the documentation
-- [ ] Provide StackBlitz example cases
+- [X] Improve the documentation
+- [X] Provide StackBlitz example cases
 - [ ] Improve the package that converts form interface into the form of backend service contract
 
 
